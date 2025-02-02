@@ -34,12 +34,11 @@ METADATA=../../metadata/SraRunTable.txt
 # Get a list of SRA accession numbers to download, put them in a file
 
 # there are 8 populations and 75 samples. 
-# we're going to work only with Elizabeth River and King's Creek in this tutorial
-    # the metadata table was downloaded from the SRA's "Run Selector" page. 
+# the metadata table was downloaded from the SRA's "Run Selector" page. 
 
 # extract rows matching our population names, pull out the SRA accession number (the first column)
 ACCLIST=../../metadata/accessionlist.txt
-grep -E "Elizabeth River|King's Creek" $METADATA | cut -f 1 -d "," >$ACCLIST
+tail -n +2 $METADATA | cut -f 1 -d "," >$ACCLIST
 
 # use parallel to download 2 accessions at a time. 
 cat $ACCLIST | parallel -j 2 "fasterq-dump -O ${OUTDIR} {}"
