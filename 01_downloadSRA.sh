@@ -2,8 +2,8 @@
 #SBATCH --job-name=fasterq_dump
 #SBATCH -n 1
 #SBATCH -N 1
-#SBATCH -c 12
-#SBATCH --mem=15G
+#SBATCH -c 6
+#SBATCH --mem=30G
 #SBATCH --partition=general
 #SBATCH --qos=general
 #SBATCH --mail-type=ALL
