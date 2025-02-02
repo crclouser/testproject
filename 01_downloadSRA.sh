@@ -46,3 +46,6 @@ cat $ACCLIST | parallel -j 2 "fasterq-dump -O ${OUTDIR} {}"
 
 # compress the files 
 ls ${OUTDIR}/*fastq | parallel -j 12 gzip
+
+
+echo "download all the tiny letters"
