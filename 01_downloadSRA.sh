@@ -2,7 +2,7 @@
 #SBATCH --job-name=fasterq_dump_xanadu
 #SBATCH -n 1
 #SBATCH -N 1
-#SBATCH -c 12
+#SBATCH -c 6
 #SBATCH --mem=30G
 #SBATCH --partition=general
 #SBATCH --qos=general
