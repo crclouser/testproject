@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=fasterq_dump_xanadu
+#SBATCH --job-name=fasterq_dump
 #SBATCH -n 1
 #SBATCH -N 1
 #SBATCH -c 12
